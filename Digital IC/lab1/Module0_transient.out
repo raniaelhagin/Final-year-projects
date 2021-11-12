@@ -1,0 +1,9 @@
+* T-Spice 6.02 Simulation	Fri Nov 12 16:11:25 2021	D:\Materials\college\final year\Final-year-projects\Digital IC\lab1\Module0_transient.sp  (CAZM)
+* Command line: tspice -o D:\Materials\college\final year\Final-year-projects\Digital IC\lab1\Module0_transient.out D:\Materials\college\final year\Final-year-projects\Digital IC\lab1\Module0_transient.sp 
+* T-Spice Win32 6.02.20000302.11:47:10
+* Operating System: Windows NT/95
+* Warning SP : "Module0_transient.sp" line 1 First line is a title and is ignored -> 
+*		".include "D:\Materials\college\final year\Digital IC\tanner_l_edit\tanner_l_edit\ml5_20.md""
+* Fatal   T-SPICE : Missing model declaration for "PMOS"
+
+* End of T-Spice output file
