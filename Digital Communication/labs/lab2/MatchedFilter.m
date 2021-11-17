@@ -55,7 +55,7 @@ N_bits = 0;
 % Knowing the length of the square pulse and the length of the input
 % sequence of pulses corresponding to the input bits, compute the number of
 % input bits and store it in N_bits.
-
+N_bits = round(N_y_signal / N_sq);
 %%%
 
 ht = [];
@@ -66,13 +66,31 @@ switch type
         %%% WRITE YOUR CODE HERE
         % Compute the MF impulse response ht, and the MF output signal
         % z_signal for the bipolar encoding case
-  
+        amp_bi = sqrt(E_bit/N_sq);
+        xo = amp_bi*ones(1, N_sq);
+        x1 = -amp_bi*ones(1, N_sq);
+        
+        ht = xo - x1;
+        z_signal = conv(y_signal, ht);
         %%%
         
         %%% WRITE YOUR CODE HERE
         % Implement the decision part of the receiver with bipolar encoding
         % which uses z_signal to decide the values of the input bits
- 
+        E1 = E_bit/2; 
+        E2 = E_bit/2;
+        Vth = (E1 - E2) / 2;
+        rec_bits = zeros(1, N_bits);
+        for i = 1:N_bits
+           % the sampling time here can be chosen arbitrary as the MF is
+           % designed for any chioce of Ts 
+           if z_signal(i*N_sq) >= Vth
+               rec_bits(i) = 1;
+           else 
+               rec_bits(i) = 0;
+           end
+        end
+         
         %%%
         
     case ('unipolar')
@@ -81,6 +99,12 @@ switch type
         %%% WRITE YOUR CODE HERE
         % Part 2-a: Compute the MF impulse response ht, and the MF output 
         % signal z_signal for the unipolar encoding case
+        amp_uni = sqrt((2*E_bit)/N_sq);
+        xo = amp_uni*ones(1, N_sq);
+        x1 = zeros(1, N_sq);
+        
+        ht = xo - x1;
+        z_signal = conv(y_signal, ht);        
 
         %%%
         
@@ -88,6 +112,19 @@ switch type
         % Pat 2-b: Implement the decision part of the receiver with 
         % unipolar encoding which uses z_signal to decide the values of the
         % input bits
+        E1 = 2*E_bit; 
+        E2 = 0;
+        Vth = (E1 - E2) / 2;
+        rec_bits = zeros(1, N_bits);
+        for i = 1:N_bits
+           % the sampling time here can be chosen arbitrary as the MF is
+           % designed for any chioce of Ts 
+           if z_signal(i*N_sq) >= Vth
+               rec_bits(i) = 1;
+           else 
+               rec_bits(i) = 0;
+           end
+        end
         
         %%%
 

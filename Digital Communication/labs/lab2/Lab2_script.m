@@ -7,6 +7,9 @@
 % 
 % Lab No. 2: Handling noisy channels: Matched filters
 
+% Name: Rania Hamada Mohammed
+% ID: 79
+
 %% Simulation parameters
 
 fs = 1e5;                       % Sampling rate (samples per sec)
@@ -58,6 +61,7 @@ Eb_No_db = 0;       % The specified Eb/No value in dB
 % Knowing the value of Eb/No in dB, and for the given energy per bit value
 % specified above, find the corresponding value of No.
 
+No = Energy_per_bit / (10 .^ (Eb_No_db/10));
 
 %%%
 
@@ -92,7 +96,9 @@ title('A square pulse in time and the effect of noise','linewidth',10)
 x_square = zeros(size(t_axis));
 y_square = zeros(size(t_axis));
 %%% WRITE YOUR CODE HERE
-
+x_bits = [1 0 1 0];
+x_square = GenerateSquarePulses(t_axis,T_sq,Energy_per_bit,fs,x_bits,'unipolar');
+y_square = AWGNChannel(x_square,No,fs);
 %%%
 
 figure
@@ -174,6 +180,11 @@ BER_uni = 0;
 %
 % Hint: reuse the code from the previous cell. Your code can be as short as
 % 5 lines. You can reuse the function ComputeBER from Experiment 1.
+x_bits = randi([0, 1], 1, N_bits);
+x_square = GenerateSquarePulses(t_axis,T_sq,Energy_per_bit,fs,x_bits,'unipolar');
+y_square = AWGNChannel(x_square,No,fs);
+[rec_bits, ht, z_square] = MatchedFilter(T_sq,Energy_per_bit,fs,y_square,'unipolar');
+BER_uni = ComputeBER(x_bits, rec_bits);
 
 %%%
 
@@ -268,7 +279,11 @@ BER_bi = 0;
 %
 % Hint: reuse the code from the previous cell. Your code can be as short as
 % 5 lines. You can reuse the function ComputeBER from Experiment 1.
-
+x_bits = randi([0, 1], 1, N_bits);
+x_square = GenerateSquarePulses(t_axis,T_sq,Energy_per_bit,fs,x_bits,'bipolar');
+y_square = AWGNChannel(x_square,No,fs);
+[rec_bits, ht, z_square] = MatchedFilter(T_sq,Energy_per_bit,fs,y_square,'bipolar');
+BER_bi = ComputeBER(x_bits, rec_bits);
 %%%
 
 %% THe BER performance of bipolar and unipolar MF receivers versus EB/No
@@ -288,12 +303,31 @@ BER_uni = zeros(size(Eb_No_dB_vector));
 
 %%% WRITE YOUR CODE HERE
 
+x_bits = randi([0, 1], 1, N_bits);
+
+% for unipolar
+x_square_uni = GenerateSquarePulses(t_axis,T_sq,Energy_per_bit,fs,x_bits,'unipolar');
+for i=1:length(Eb_No_dB_vector)
+    No = Energy_per_bit ./ (10 .^ (Eb_No_dB_vector(i)/10));
+    y_square_uni = AWGNChannel(x_square_uni,No,fs);
+    [rec_bits, ht, z_square] = MatchedFilter(T_sq,Energy_per_bit,fs,y_square_uni,'unipolar');
+    BER_uni(i) = ComputeBER(x_bits, rec_bits);
+end 
+
+% for bipolar
+x_square_bi = GenerateSquarePulses(t_axis,T_sq,Energy_per_bit,fs,x_bits,'bipolar');
+for i=1:length(Eb_No_dB_vector)
+    No = Energy_per_bit ./ (10 .^ (Eb_No_dB_vector(i)/10));
+    y_square_bi = AWGNChannel(x_square_bi,No,fs);
+    [rec_bits, ht, z_square] = MatchedFilter(T_sq,Energy_per_bit,fs,y_square_bi,'bipolar');
+    BER_bi(i) = ComputeBER(x_bits, rec_bits);
+end 
 %%%
 
 figure
 semilogy(Eb_No_dB_vector,BER_bi,'-xk','linewidth',2)
 hold on
 semilogy(Eb_No_dB_vector,BER_uni,'-ob','linewidth',2)
-legend('Bipolar encoding','Unipolar encoding','linewidth',2)
+legend('Bipolar encoding','Unipolar encoding')
 xlabel('Eb/No','linewidth',2)
 ylabel('BER','linewidth',2)

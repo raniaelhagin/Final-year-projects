@@ -47,8 +47,7 @@ one_square = zeros(1,N_sq);
 % i.e., the variable one_square should not change dimensions after you
 % generate the pulse. Keep in mind that you have to set the energy of the
 % square pulse to be equal to E_bit.
-
-
+x_square = zeros(1, N);
 % YOUR CODE ENDS HERE
 %%%
 
@@ -62,12 +61,26 @@ switch type
     case ('bipolar')
         %%% This case is for NRZ
         %%% WRITE YOUR CODE HERE
-
+        amp_bi = sqrt(E_bit/N_sq);
+        for i=1:length(x_bits)
+            if x_bits(i) == 1
+                x_square((((N_sq-1)*(i-1)) + i): (i*N_sq)) = amp_bi + one_square;
+            elseif x_bits(i) == 0
+                x_square((((N_sq-1)*(i-1)) + i): (i*N_sq)) = -amp_bi + one_square;
+            end
+        end
         % YOUR CODE ENDS HERE
         
     case ('unipolar')
         %%% This case is for RZ
         %%% WRITE YOUR CODE HERE
+        amp_uni = sqrt((2*E_bit)/N_sq);
+        
+        for i=1:length(x_bits)
+            if x_bits(i) == 1
+                x_square((((N_sq-1)*(i-1)) + i): (i*N_sq)) = amp_uni + one_square;
+            end
+        end
         
         % YOUR CODE ENDS HERE
 end

@@ -14,6 +14,7 @@ y = zeros(size(x));
 % Your code should generate the ouptut y which is a noisy version of the
 % input x, corrupted by an AWGN noise with variance No/2. Hint: use randn
 % as a function for generating Gaussian noise with unit variance.
-
+n = sqrt(No/2) .* randn(size(x));
+y = n + x;
 
 %%%
