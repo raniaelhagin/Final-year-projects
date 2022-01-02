@@ -1,0 +1,159 @@
+* T-Spice 6.02 Simulation	Thu Dec 30 19:14:18 2021	D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab2\inv.spc  (CAZM)
+* Command line: tspice -o D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab2\inv.out D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab2\inv.spc 
+* T-Spice Win32 6.02.20000302.11:47:10
+* Operating System: Windows NT/95
+* Warning T-SPICE : Node Out is not in this circuit
+* Warning T-SPICE : Node Vdd is attached to only one device
+* Warning T-SPICE : Node In is attached to only one device
+* Warning T-SPICE : 2 connectivity warning messages in "D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab2\inv.con"
+
+* Warning T-SPICE : The following nodes belong to an independent circuit which
+*                   is not grounded. This may hinder convergence!
+* 			3
+* 			4
+* 			1
+* 			2
+
+*SEDIT: Alter blocks = 0
+
+* Device and node counts:
+*             MOSFETs - 2                 MOSFET geometries - 2       
+*                BJTs - 0                             JFETs - 0       
+*             MESFETs - 0                            Diodes - 0       
+*          Capacitors - 0                         Resistors - 0       
+*           Inductors - 0                  Mutual inductors - 0       
+*  Transmission lines - 0        Coupled transmission lines - 0       
+*     Voltage sources - 2                   Current sources - 0       
+*                VCVS - 0                              VCCS - 0       
+*                CCVS - 0                              CCCS - 0       
+*    V-control switch - 0                  I-control switch - 0       
+*       Macro devices - 0        Functional model instances - 0       
+*         Subcircuits - 0              Subcircuit instances - 0       
+*   Independent nodes - 4                    Boundary nodes - 3       
+*         Total nodes - 7       
+
+* *** 5 WARNING MESSAGES GENERATED
+
+
+*SEDIT: Alter=0
+*SEDIT: Analysis types DCOP 0 ACMODEL 0 AC 0 TRANSIENT 1 TRANSFER 0 NOISE 0 
+
+*WEDIT: .tran/powerup   5e-009   5e-007
+TRANSIENT ANALYSIS
+Time<s>        v(In,GND)<V>
+   0.0000e+000  0.0000e+000
+   5.0000e-010  2.5000e+000
+   1.0000e-009  5.0000e+000
+   6.0000e-009  5.0000e+000
+   1.1000e-008  5.0000e+000
+   1.5999e-008  5.0000e+000
+   2.0999e-008  5.0000e+000
+   2.5999e-008  5.0000e+000
+   3.0999e-008  5.0000e+000
+   3.5999e-008  5.0000e+000
+   4.0999e-008  5.0000e+000
+   4.5999e-008  5.0000e+000
+   5.0999e-008  5.0000e+000
+   5.5999e-008  5.0000e+000
+   6.0999e-008  5.0000e+000
+   6.6000e-008  5.0000e+000
+   7.1000e-008  5.0000e+000
+   7.6000e-008  5.0000e+000
+   8.1000e-008  5.0000e+000
+   8.6000e-008  5.0000e+000
+   9.1000e-008  5.0000e+000
+   9.6000e-008  5.0000e+000
+   1.0100e-007  5.0000e+000
+  1.02000e-007  0.0000e+000
+   1.0700e-007  0.0000e+000
+   1.1200e-007  0.0000e+000
+   1.1700e-007  0.0000e+000
+   1.2200e-007  0.0000e+000
+   1.2700e-007  0.0000e+000
+   1.3200e-007  0.0000e+000
+   1.3700e-007  0.0000e+000
+   1.4200e-007  0.0000e+000
+   1.4700e-007  0.0000e+000
+   1.5200e-007  0.0000e+000
+   1.5700e-007  0.0000e+000
+   1.6200e-007  0.0000e+000
+   1.6700e-007  0.0000e+000
+   1.7200e-007  0.0000e+000
+   1.7700e-007  0.0000e+000
+   1.8200e-007  0.0000e+000
+   1.8700e-007  0.0000e+000
+   1.9200e-007  0.0000e+000
+   1.9700e-007  0.0000e+000
+   2.0000e-007  0.0000e+000
+  2.01000e-007  5.0000e+000
+   2.0600e-007  5.0000e+000
+   2.1100e-007  5.0000e+000
+   2.1600e-007  5.0000e+000
+   2.2100e-007  5.0000e+000
+   2.2600e-007  5.0000e+000
+   2.3100e-007  5.0000e+000
+   2.3600e-007  5.0000e+000
+   2.4100e-007  5.0000e+000
+   2.4600e-007  5.0000e+000
+   2.5100e-007  5.0000e+000
+   2.5600e-007  5.0000e+000
+   2.6100e-007  5.0000e+000
+   2.6600e-007  5.0000e+000
+   2.7100e-007  5.0000e+000
+   2.7600e-007  5.0000e+000
+   2.8100e-007  5.0000e+000
+   2.8600e-007  5.0000e+000
+   2.9100e-007  5.0000e+000
+   2.9600e-007  5.0000e+000
+   3.0100e-007  5.0000e+000
+  3.02000e-007  0.0000e+000
+   3.0700e-007  0.0000e+000
+   3.1200e-007  0.0000e+000
+   3.1700e-007  0.0000e+000
+   3.2200e-007  0.0000e+000
+   3.2700e-007  0.0000e+000
+   3.3200e-007  0.0000e+000
+   3.3700e-007  0.0000e+000
+   3.4200e-007  0.0000e+000
+   3.4700e-007  0.0000e+000
+   3.5200e-007  0.0000e+000
+   3.5700e-007  0.0000e+000
+   3.6200e-007  0.0000e+000
+   3.6700e-007  0.0000e+000
+   3.7200e-007  0.0000e+000
+   3.7700e-007  0.0000e+000
+   3.8200e-007  0.0000e+000
+   3.8700e-007  0.0000e+000
+   3.9200e-007  0.0000e+000
+   3.9700e-007  0.0000e+000
+  4.00000e-007  0.0000e+000
+  4.01000e-007  5.0000e+000
+   4.0600e-007  5.0000e+000
+   4.1100e-007  5.0000e+000
+   4.1600e-007  5.0000e+000
+   4.2100e-007  5.0000e+000
+   4.2600e-007  5.0000e+000
+   4.3100e-007  5.0000e+000
+   4.3600e-007  5.0000e+000
+   4.4100e-007  5.0000e+000
+   4.4600e-007  5.0000e+000
+   4.5100e-007  5.0000e+000
+   4.5600e-007  5.0000e+000
+   4.6100e-007  5.0000e+000
+   4.6600e-007  5.0000e+000
+   4.7100e-007  5.0000e+000
+   4.7600e-007  5.0000e+000
+   4.8100e-007  5.0000e+000
+   4.8600e-007  5.0000e+000
+   4.9100e-007  5.0000e+000
+   4.9600e-007  5.0000e+000
+  5.00000e-007  5.0000e+000
+
+* Parsing                      0.01 seconds
+* Setup                        0.01 seconds
+* Transient Analysis           0.01 seconds
+* -----------------------------------------
+* Total                        0.03 seconds
+
+
+* End of T-Spice output file

@@ -1,0 +1,17 @@
+DRC by Tanner Research's L-Edit Version 8.30
+File:	D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab2\Layout2.tdb
+Cell:	inv
+Date:	Sun Dec 26 14:29:08 2021
+
+
+4.3c Not Exists: ActCnt not on Active = 0 Locator Units: (-11.000,-8.500)->(-9.000,-6.500)
+
+1 error.
+0 warnings.
+
+
+Select layer generation elapsed time: 00:00:00 (0.00%).
+Merge/Boolean layer generation elapsed time: 00:00:00 (0.00%).
+DRC rule checking elapsed time: 00:00:00 (0.00%).
+
+Total DRC elapsed time: 00:00:00.

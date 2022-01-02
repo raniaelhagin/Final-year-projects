@@ -1,5 +1,5 @@
-* T-Spice 6.02 Simulation	Sun Dec 26 12:29:20 2021	D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Module0.sp  (CAZM)
-* Command line: tspice -o D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Module0_transient.out D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Module0.sp 
+* T-Spice 6.02 Simulation	Sun Dec 26 12:22:34 2021	D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Module0.sp  (CAZM)
+* Command line: tspice -o D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Module0_0.out D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Module0.sp 
 * T-Spice Win32 6.02.20000302.11:47:10
 * Operating System: Windows NT/95
 
@@ -790,12 +790,12 @@ Time<s>        v(In,GND)<V>  v(Out,GND)<V>
   5.99853e-007  0.0000e+000  5.0000e+000
  6.000000e-007  0.0000e+000  5.0000e+000
 
-* Parsing                      0.03 seconds
+* Parsing                      0.17 seconds
 * Setup                        0.01 seconds
-* DC operating point           0.04 seconds
-* Transient Analysis           0.25 seconds
+* DC operating point           0.01 seconds
+* Transient Analysis           0.11 seconds
 * -----------------------------------------
-* Total                        0.33 seconds
+* Total                        0.30 seconds
 
 
 * End of T-Spice output file

@@ -1,0 +1,92 @@
+* T-Spice 6.02 Simulation	Thu Dec 30 17:27:46 2021	D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\dc_sweep_resizing.sp  (CAZM)
+* Command line: tspice -o D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\dc_sweep_resizing.out D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\dc_sweep_resizing.sp 
+* T-Spice Win32 6.02.20000302.11:47:10
+* Operating System: Windows NT/95
+
+*SEDIT: probesdbfile="D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\inverter_sch.sdb"
+*SEDIT: probetopmodule="Module0"
+*SEDIT: Alter blocks = 0
+
+* Device and node counts:
+*             MOSFETs - 2                 MOSFET geometries - 2       
+*                BJTs - 0                             JFETs - 0       
+*             MESFETs - 0                            Diodes - 0       
+*          Capacitors - 0                         Resistors - 0       
+*           Inductors - 0                  Mutual inductors - 0       
+*  Transmission lines - 0        Coupled transmission lines - 0       
+*     Voltage sources - 2                   Current sources - 0       
+*                VCVS - 0                              VCCS - 0       
+*                CCVS - 0                              CCCS - 0       
+*    V-control switch - 0                  I-control switch - 0       
+*       Macro devices - 0        Functional model instances - 0       
+*         Subcircuits - 0              Subcircuit instances - 0       
+*   Independent nodes - 1                    Boundary nodes - 3       
+*         Total nodes - 4       
+
+
+*SEDIT: Alter=0
+*SEDIT: Analysis types DCOP 0 ACMODEL 0 AC 0 TRANSIENT 0 TRANSFER 1 NOISE 0 
+
+*WEDIT: XFER cycles Vin  51
+*WEDIT: .dc Vin        0        5      0.1
+TRANSFER ANALYSIS
+       Vin<V>  v(In,GND)<V>  v(Out,GND)<V>
+ 0.0000e+000  0.0000e+000  5.0000e+000
+ 1.0000e-001  1.0000e-001  5.0000e+000
+ 2.0000e-001  2.0000e-001  5.0000e+000
+ 3.0000e-001  3.0000e-001  5.0000e+000
+ 4.0000e-001  4.0000e-001  5.0000e+000
+ 5.0000e-001  5.0000e-001  5.0000e+000
+ 6.0000e-001  6.0000e-001  5.0000e+000
+ 7.0000e-001  7.0000e-001  5.0000e+000
+ 8.0000e-001  8.0000e-001  4.9997e+000
+ 9.0000e-001  9.0000e-001  4.9982e+000
+ 1.0000e+000  1.0000e+000  4.9943e+000
+ 1.1000e+000  1.1000e+000  4.9873e+000
+ 1.2000e+000  1.2000e+000  4.9769e+000
+ 1.3000e+000  1.3000e+000  4.9624e+000
+ 1.4000e+000  1.4000e+000  4.9438e+000
+ 1.5000e+000  1.5000e+000  4.9208e+000
+ 1.6000e+000  1.6000e+000  4.8920e+000
+ 1.7000e+000  1.7000e+000  4.8569e+000
+ 1.8000e+000  1.8000e+000  4.8139e+000
+ 1.9000e+000  1.9000e+000  4.7636e+000
+ 2.0000e+000  2.0000e+000  4.6993e+000
+ 2.1000e+000  2.1000e+000  4.6208e+000
+ 2.2000e+000  2.2000e+000  4.5188e+000
+ 2.3000e+000  2.3000e+000  4.3758e+000
+ 2.4000e+000  2.4000e+000  4.1310e+000
+ 2.5000e+000  2.5000e+000  2.5282e+000
+ 2.6000e+000  2.6000e+000  8.6047e-001
+ 2.7000e+000  2.7000e+000  5.9044e-001
+ 2.8000e+000  2.8000e+000  4.3885e-001
+ 2.9000e+000  2.9000e+000  3.3562e-001
+ 3.0000e+000  3.0000e+000  2.5756e-001
+ 3.1000e+000  3.1000e+000  1.9585e-001
+ 3.2000e+000  3.2000e+000  1.4743e-001
+ 3.3000e+000  3.3000e+000  1.0877e-001
+ 3.4000e+000  3.4000e+000  7.7621e-002
+ 3.5000e+000  3.5000e+000  5.3673e-002
+ 3.6000e+000  3.6000e+000  3.4588e-002
+ 3.7000e+000  3.7000e+000  2.0388e-002
+ 3.8000e+000  3.8000e+000  1.0389e-002
+ 3.9000e+000  3.9000e+000  4.1726e-003
+ 4.0000e+000  4.0000e+000  1.0880e-003
+ 4.1000e+000  4.1000e+000  1.4625e-004
+ 4.2000e+000  4.2000e+000  1.2566e-005
+ 4.3000e+000  4.3000e+000  1.0946e-006
+ 4.4000e+000  4.4000e+000  7.2497e-008
+ 4.5000e+000  4.5000e+000  1.5396e-009
+ 4.6000e+000  4.6000e+000 -6.9418e-008
+ 4.7000e+000  4.7000e+000 -1.4038e-007
+ 4.8000e+000  4.8000e+000 -2.1133e-007
+ 4.9000e+000  4.9000e+000 -2.8229e-007
+ 5.0000e+000  5.0000e+000 -3.5325e-007
+
+* Parsing                      0.01 seconds
+* Transfer Analysis            0.03 seconds
+* -----------------------------------------
+* Total                        0.04 seconds
+
+
+* End of T-Spice output file

@@ -1,0 +1,82 @@
+File written by LVS 3.13/Win32 as a result of: "" on Thu Dec 30 21:38:15 2021
+
+Command line:
+lvs D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\inv.spc D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\Module0.sp -o D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\inv.out -nrcl -c2 -dg0.010 -vfa 
+
+Engine configuration report:
+Consider Bulk nodes...................................................ON
+Consider Resistors as polarized elements..............................OFF
+Consider Capacitors as polarized elements.............................OFF
+Consider Inductors as polarized elements..............................OFF
+Optimize shorted & parallel R, C, MOSFETs; series R and C.............OFF
+Replace series MOSFETs................................................OFF
+Fast Iteration........................................................OFF
+
+Parsing file D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\inv.spc...
+Including file D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\ml5_20.md
+Flattening network...
+Parsing file D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\Module0.sp...
+Including file D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\Simulation\ml5_20.md
+
+Warning: Did not recognize and will ignore Spice statement: .probe
+Flattening network...
+
+Device                    inv.spc   Module0.sp
+--------------       ------------ ------------
+
+M_nmos                          1            1
+M_pmos                          1            1
+Total elements                  2            2
+
+Total nodes                     4            4
+
+Iterating...
+5% done
+10% done
+15% done
+20% done
+25% done
+30% done
+35% done
+40% done
+45% done
+50% done
+55% done
+60% done
+65% done
+70% done
+75% done
+80% done
+85% done
+90% done
+95% done
+100% done
+
+*************************** REPORTING AUTOMORPHISM ***************************
+
+Report of elements:
+*******************
+Automorph class of elements
+inv.spc       M2                   fanout: BULK =  1   D/S (  1,   1)   G =  1   
+Module0.sp    M2                   fanout: BULK =  1   D/S (  1,   1)   G =  1   
+---------------------------------------------------
+Automorph class of elements
+inv.spc       M1                   fanout: BULK =  1   D/S (  1,   1)   G =  1   
+Module0.sp    M1                   fanout: BULK =  1   D/S (  1,   1)   G =  1   
+---------------------------------------------------
+
+0 perfectly matched element class(es)
+2 automorphed element class(es)
+4 perfectly matched node class(es)
+
+
+Doing detailed trial matching...
+
+Warning: Parametric mismatch between elements inv.spc: M2:L=2e-006 W=6e-006   (Not all decimals shown) and Module0.sp: M2:L=2e-006 W=3.43e-005   (Not all decimals shown)
+
+Warning: Parametric mismatch between elements Module0.sp: M1:L=2e-006 W=1.07e-005   (Not all decimals shown) and inv.spc: M1:L=2e-006 W=6e-006   (Not all decimals shown)
+
+Circuits are only topologically equal.
+Run time: 0:02 (min:sec)
+
+	0 error(s), 3 warning(s)

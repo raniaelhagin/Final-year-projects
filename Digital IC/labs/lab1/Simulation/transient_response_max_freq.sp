@@ -9,11 +9,11 @@
 + probetopmodule="Module0"
 
 * Main circuit: Module0
-M1 Out In GND GND NMOS L=2u W=22u AD=66p PD=24u AS=66p PS=24u 
-M2 Out In Vdd Vdd PMOS L=2u W=22u AD=66p PD=24u AS=66p PS=24u
+M1 Out In GND GND NMOS L=2u W=10.7u AD=66p PD=24u AS=66p PS=24u 
+M2 Out In Vdd Vdd PMOS L=2u W=34.5u AD=66p PD=24u AS=66p PS=24u
 * End of main circuit: Module0
-VPULSE In GND PULSE (0 5 0 0 0 100u 200u)
+VPulse In GND PULSE (0 5 0 0 0 100u 200u)
 VSupply Vdd GND 5
-.tran/op 10u 600u method=bdf
+.tran/op 10u 600u method=50f
 .print tran v(In,GND) v(Out,GND)
 

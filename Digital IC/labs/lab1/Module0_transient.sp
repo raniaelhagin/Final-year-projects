@@ -7,6 +7,7 @@
 .options probefilename="inverter_schematic.dat"
 + probesdbfile="D:\Materials\college\final year\Final-year-projects\Digital IC\lab1\inverter_schematic.sdb"
 + probetopmodule="Module0"
+.include "D:\Materials\college\final year\Final-year-projects\Digital IC\labs\lab1\ml5_20.md"
 
 * Main circuit: Module0
 M1 Out In GND GND NMOS L=2u W=22u AD=66p PD=24u AS=66p PS=24u 
